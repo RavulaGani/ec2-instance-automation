@@ -9,34 +9,11 @@ The system provisions five servers, each with a specific role such as web hostin
 
 ## Project Architecture
 
-The main automation script launches multiple EC2 instances and executes setup scripts through user-data during instance initialization.
+The following diagram shows how the automation script launches and configures all EC2 instances.
 
-run.sh
-│
-├── Linux Web Server
-│     └── linux-setup.sh
-│          installs nginx
-│          hosts HTML webpage
-│
-├── Linux Docker Server
-│     └── install_docker.sh
-│          installs Docker engine
-│          configures docker group
-│
-├── Linux Monitoring Server
-│     └── monitor.sh
-│          collects CPU, disk, memory stats
-│          logs system metrics
-│
-├── Windows Web Server
-│     └── windows-setup.ps1
-│          installs IIS
-│          hosts webpage
-│
-└── Windows Dev Server
-      └── install_tools.ps1
-           installs developer tools
-           chocolatey + git + vscode
+![AWS EC2 Automation Architecture](architecture.png)
+
+The main automation script launches multiple EC2 instances and executes setup scripts through **user-data** during instance initialization.
 
 --------------------------------------------------
 
@@ -177,11 +154,11 @@ cd ec2-instance-automation
 
 Step 3: Give execution permission
 
-chmod +x run.sh
+chmod +x run-all.sh
 
 Step 4: Run the automation script
 
-./run.sh
+./run-all.sh
 
 --------------------------------------------------
 
