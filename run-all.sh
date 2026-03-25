@@ -1,8 +1,8 @@
 #!/bin/bash
  
 # ─── Configuration ────────────────────────────────────────────
-LINUX_AMI="ami-0df4b2961410d4cff"
-WINDOWS_AMI="ami-00802439f7dc66eab"
+LINUX_AMI="use your windows ami"
+WINDOWS_AMI="use your windows ami"
  
 INSTANCE_TYPE="t3.micro"
 KEY_NAME="my-keypair"
